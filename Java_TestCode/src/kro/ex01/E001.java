@@ -18,5 +18,6 @@ public class E001 {
 	
 		System.out.println(diff);
 		System.out.println(System.getProperty("os.name").toLowerCase());
+		System.out.println(System.getProperty("os.name").toLowerCase());
 	}
 }
