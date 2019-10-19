@@ -3,8 +3,6 @@ package kro.file;
 import java.io.File;
 import java.io.IOException;
 
-import org.apache.tika.Tika;
-
 public class ListFiles {
 	 
 	   public static void main(String[] args) throws IOException {
@@ -24,8 +22,6 @@ public class ListFiles {
 	   }
 	 
 	   public static void doFile(File file) throws IOException {
-			Tika tika = new Tika();
 	      System.out.println(file.getAbsolutePath());
-	      	System.out.println(tika.detect(file));
 	   }
 	}
