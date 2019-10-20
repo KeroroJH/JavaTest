@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<context:annotation-config />	
+	
+	<bean id="kro32" class="spring.domain.KroExam">
+		<property name="kor" value="30" />
+		<property name="eng" value="40" />
+	</bean>
+	
+	<bean id="kro33" class="spring.domain.KroExam">
+		<property name="kor" value="50" />
+		<property name="eng" value="50" />
+	</bean>
+	
+<!-- 	<bean id="exam2" class="spring.domain.KroExam">
+		<constructor-arg value="10"/>
+		<constructor-arg value="10"/>
+		<constructor-arg value="10"/>
+	</bean>
+	-->
+	<bean id="exam3" class="spring.domain.KroExam" p:kor="90" /> 
+	
+	<bean id="examconsole" class="spring.ui.DecoExamConsole">
+		<property name="exam" ref="kro33"/>
+	</bean>
+	
+	<bean id="examconsole2" class="spring.ui.InlineExamConsole">
+		
+	</bean>
+
+</beans>
