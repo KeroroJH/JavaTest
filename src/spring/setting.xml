@@ -18,12 +18,12 @@
 		<property name="eng" value="50" />
 	</bean>
 	
-<!-- 	<bean id="exam2" class="spring.domain.KroExam">
+ 	<bean id="exam2" class="spring.domain.KroExam">
 		<constructor-arg value="10"/>
 		<constructor-arg value="10"/>
 		<constructor-arg value="10"/>
 	</bean>
-	-->
+
 	<bean id="exam3" class="spring.domain.KroExam" p:kor="90" /> 
 	
 	<bean id="examconsole" class="spring.ui.DecoExamConsole">
@@ -31,7 +31,7 @@
 	</bean>
 	
 	<bean id="examconsole2" class="spring.ui.InlineExamConsole">
-		
+		<property name="exam" ref="exam2"/>
 	</bean>
 
 </beans>

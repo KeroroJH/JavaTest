@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import spring.domain.Exam;
 import spring.ui.ExamConsole;
 
-public class Program1 {
+public class Program2 {
 
 	public static void main(String[] args) {
 /*		Exam exam = new KroExam();
@@ -15,16 +15,11 @@ public class Program1 {
 		
 		console.print();*/
 
-		ApplicationContext ap = new ClassPathXmlApplicationContext("spring/setting.xml");
-		//ExamConsole console = ap.getBean(ExamConsole.class);
-		ExamConsole console = (ExamConsole) ap.getBean("examconsole2");
+		ApplicationContext ap = new ClassPathXmlApplicationContext("spring/setting2.xml");
+		ExamConsole console = ap.getBean(ExamConsole.class);
 		
 		console.print();
-		
-		System.out.println("****************************");
-		
-		Exam ex01 = (Exam) ap.getBean("exam3");
-		System.out.println(ex01);
+	
 	}
 
 }
